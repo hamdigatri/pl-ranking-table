@@ -5,6 +5,7 @@ import axios from "axios";
 class Home extends React.Component {
   static async getInitialProps() {
     const res = await axios.get(
+      "http://api.football-data.org/v2/competitions/2021/standings",
       { headers: { "X-Auth-Token": "57c8cb7275dd4ab695bc3f3d9b23ba92" } }
     );
     return { data: res.data };
@@ -24,6 +25,7 @@ class Home extends React.Component {
             href="https://unpkg.com/purecss@0.6.1/build/pure-min.css"
           />
         </Head>
+        <h1>hola</h1>
       </div>
     );
   }
