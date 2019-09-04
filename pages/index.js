@@ -4,17 +4,27 @@ import axios from "axios";
 
 const Home = props => {
   return (
-    <div>
-      <Head>
-        <title>League Table</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/purecss@0.6.1/build/pure-min.css"
-        />
-      </Head>
-      <h1>hola</h1>
-    </div>
+    console.log(props.data),
+    (
+      <div>
+        <Head>
+          <title>League Table</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/purecss@0.6.1/build/pure-min.css"
+          />
+        </Head>
+        <h1>{props.data.competition.name}</h1>
+        <h2>
+          Season: {parseInt(props.data.season.startDate)} -{" "}
+          {parseInt(props.data.season.endDate)}
+        </h2>
+      </div>
+    )
   );
 };
 
