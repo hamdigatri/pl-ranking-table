@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import axios from "axios";
+import StandingsTable from "../components/standingsTable";
 
 const Home = props => {
   return (
@@ -23,6 +24,7 @@ const Home = props => {
           Season: {parseInt(props.data.season.startDate)} -{" "}
           {parseInt(props.data.season.endDate)}
         </h2>
+        <StandingsTable total={props.data.standings[0]} />
       </div>
     )
   );
