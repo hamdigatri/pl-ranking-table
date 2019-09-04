@@ -5,7 +5,7 @@ import axios from "axios";
 class Home extends React.Component {
   static async getInitialProps() {
     const res = await axios.get(
-      "http://api.football-data.org/v2/competitions/2003/matches?matchday=1"
+      { headers: { "X-Auth-Token": "57c8cb7275dd4ab695bc3f3d9b23ba92" } }
     );
     return { data: res.data };
   }
