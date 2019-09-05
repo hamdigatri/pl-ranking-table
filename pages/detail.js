@@ -7,3 +7,5 @@ const Detail = props => {
     </div>
   );
 };
+
+Detail.getInitialProps = async ({ query }) => {};
