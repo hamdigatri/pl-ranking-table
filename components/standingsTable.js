@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const StandingsTable = props => {
   const { total } = props;
@@ -18,15 +19,17 @@ const StandingsTable = props => {
         </thead>
         <tbody>
           {total.table.map(team => (
-            <tr key={team.team.id}>
-              <td>{team.position}</td>
-              <td>{team.team.name}</td>
-              <td>{team.playedGames}</td>
-              <td>{team.won}</td>
-              <td>{team.draw}</td>
-              <td>{team.lost}</td>
-              <td>{team.points}</td>
-            </tr>
+            <Link href={"/detail?id=" + team.team.id}>
+              <tr key={team.team.id}>
+                <td>{team.position}</td>
+                <td>{team.team.name}</td>
+                <td>{team.playedGames}</td>
+                <td>{team.won}</td>
+                <td>{team.draw}</td>
+                <td>{team.lost}</td>
+                <td>{team.points}</td>
+              </tr>
+            </Link>
           ))}
         </tbody>
       </table>
