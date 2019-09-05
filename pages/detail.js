@@ -8,4 +8,8 @@ const Detail = props => {
   );
 };
 
-Detail.getInitialProps = async ({ query }) => {};
+Detail.getInitialProps = async ({ query }) => {
+  return { id: query.id };
+};
+
+export default Detail;
