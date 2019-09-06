@@ -1,9 +1,9 @@
 import React from "react";
 import App, { Container } from "next/app";
+import AppContext from "../components/appContext";
 
 class MyApp extends App {
-  
-    static async getInitialProps({ Component, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     if (Component.getInitialProps) {
@@ -18,7 +18,9 @@ class MyApp extends App {
 
     return (
       <Container>
-        <Component {...pageProps} />
+        <AppContext.Provider>
+          <Component {...pageProps} />
+        </AppContext.Provider>
       </Container>
     );
   }
