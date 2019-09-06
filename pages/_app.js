@@ -1,5 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
+import axios from "axios";
 import AppContext from "../components/appContext";
 
 class MyApp extends App {
@@ -28,7 +29,13 @@ class MyApp extends App {
 
     return (
       <Container>
-        <AppContext.Provider>
+        <AppContext.Provider
+          value={{
+            competition: this.props.competition,
+            season: this.props.season,
+            standings: this.props.standings
+          }}
+        >
           <Component {...pageProps} />
         </AppContext.Provider>
       </Container>
