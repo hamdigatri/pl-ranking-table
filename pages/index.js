@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Head from "next/head";
-import axios from "axios";
 import StandingsTable from "../components/standingsTable";
+import AppContext from "../components/appContext";
 
-const Home = props => {
+const Home = () => {
+  const { competition, season, standings } = useContext(AppContext);
   return (
     console.log(props.data),
     (
