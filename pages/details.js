@@ -1,6 +1,6 @@
 import React from "react";
 
-const Detail = props => {
+const Details = props => {
   return (
     <div>
       <h1>Team detail</h1>
@@ -8,8 +8,8 @@ const Detail = props => {
   );
 };
 
-Detail.getInitialProps = async ({ query }) => {
+Details.getInitialProps = async ({ query }) => {
   return { id: query.id };
 };
 
-export default Detail;
+export default Details;

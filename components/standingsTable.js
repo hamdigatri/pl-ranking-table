@@ -19,7 +19,7 @@ const StandingsTable = props => {
         </thead>
         <tbody>
           {total.table.map(team => (
-            <Link href={"/detail?id=" + team.team.id}>
+            <Link href={"/details?id=" + team.team.id}>
               <tr key={team.team.id}>
                 <td>{team.position}</td>
                 <td>{team.team.name}</td>
