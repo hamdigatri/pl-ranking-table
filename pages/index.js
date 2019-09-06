@@ -19,7 +19,7 @@ const Home = () => {
       <h2>
         Season: {parseInt(season.startDate)} - {parseInt(season.endDate)}
       </h2>
-      <StandingsTable total={standings[0]} />
+      <StandingsTable standings={standings} />
     </div>
   );
 };

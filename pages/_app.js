@@ -20,7 +20,7 @@ class MyApp extends App {
       pageProps,
       competition: res.data.competition.name,
       season: res.data.season,
-      standings: res.data.standings
+      standings: res.data.standings[0].table
     };
   }
 

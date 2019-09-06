@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 const StandingsTable = props => {
-  const { total } = props;
+  const { standings } = props;
   return (
     <div className="table-container">
       <table>
@@ -18,7 +18,7 @@ const StandingsTable = props => {
           </tr>
         </thead>
         <tbody>
-          {total.table.map(team => (
+          {standings.map(team => (
             <Link href={"/details?id=" + team.team.id} key={team.team.id}>
               <tr>
                 <td>{team.position}</td>
