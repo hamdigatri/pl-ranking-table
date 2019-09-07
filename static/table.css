@@ -19,3 +19,8 @@ tr:hover {
 td {
   padding: 20px;
 }
+table {
+  display: inline-block;
+  height: 90vh;
+  overflow-y: scroll;
+}
