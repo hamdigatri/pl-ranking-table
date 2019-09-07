@@ -14,6 +14,7 @@ const Home = () => {
           rel="stylesheet"
           href="https://unpkg.com/purecss@0.6.1/build/pure-min.css"
         />
+        <link href="../static/table.css" rel="stylesheet" />
       </Head>
       <h1>{competition}</h1>
       <h2>
