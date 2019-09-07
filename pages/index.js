@@ -6,7 +6,7 @@ import AppContext from "../components/appContext";
 const Home = () => {
   const { competition, season, standings } = useContext(AppContext);
   return (
-    <div>
+    <div className="app-container">
       <Head>
         <title>League Table</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
