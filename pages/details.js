@@ -13,14 +13,31 @@ const Details = props => {
         </div>
         <div>
           <ul>
-            <li>Name : {team.team.name}</li>
-            <li>Played Games : {team.playedGames}</li>
-            <li>Won : {team.won}</li>
-            <li>Draw : {team.draw}</li>
-            <li>Lost : {team.lost}</li>
-            <li>Goals for : {team.goalsFor}</li>
-            <li>Goals against : {team.goalsAgainst}</li>
-            <li>Goal diffrence : {team.goalDifference}</li>
+            <li>
+              <span>Name :</span> {team.team.name}
+            </li>
+            <li>
+              <span>Played Games :</span> {team.playedGames}
+            </li>
+            <li>
+              <span>Won :</span> {team.won}
+            </li>
+            <li>
+              <span>Draw :</span> {team.draw}
+            </li>
+            <li>
+              <span>Lost :</span> {team.lost}
+            </li>
+            <li>
+              <span>Goals for :</span> {team.goalsFor}
+            </li>
+            <li>
+              <span>Goals against : </span>
+              {team.goalsAgainst}
+            </li>
+            <li>
+              <span>Goal diffrence :</span> {team.goalDifference}
+            </li>
           </ul>
         </div>
       </div>
