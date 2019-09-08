@@ -7,14 +7,16 @@ const StandingsTable = props => {
     <div className="table-container">
       <table>
         <thead>
-          <td></td>
-          <td>Position</td>
-          <td>Team</td>
-          <td>Played</td>
-          <td>Won</td>
-          <td>Draw</td>
-          <td>Lost</td>
-          <td>Points</td>
+          <tr>
+            <td></td>
+            <td>Position</td>
+            <td>Team</td>
+            <td>Played</td>
+            <td>Won</td>
+            <td>Draw</td>
+            <td>Lost</td>
+            <td>Points</td>
+          </tr>
         </thead>
         <tbody>
           {standings.map(team => (
