@@ -19,6 +19,10 @@ tr:hover {
 td {
   padding: 20px;
 }
+.table-container {
+  display: flex;
+  justify-content: center;
+}
 table {
   display: inline-block;
   height: 90vh;
