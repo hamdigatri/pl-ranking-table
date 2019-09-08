@@ -1,5 +1,6 @@
 import React from "react";
 import App, { Container } from "next/app";
+import Head from "next/head";
 import axios from "axios";
 import AppContext from "../components/appContext";
 
@@ -29,6 +30,20 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Head>
+          <title>League Table</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/purecss@0.6.1/build/pure-min.css"
+          />
+          <link href="../static/table.css" rel="stylesheet" />
+          <link href="../static/style.css" rel="stylesheet" />
+        </Head>
+
         <AppContext.Provider
           value={{
             competition: this.props.competition,

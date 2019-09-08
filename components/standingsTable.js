@@ -8,6 +8,7 @@ const StandingsTable = props => {
       <table>
         <thead>
           <tr>
+            <td></td>
             <td>Position</td>
             <td>Team</td>
             <td>Played</td>
@@ -21,11 +22,12 @@ const StandingsTable = props => {
           {standings.map(team => (
             <Link href={"/details?id=" + team.team.id} key={team.team.id}>
               <tr>
-                <img
-                  src={team.team.crestUrl}
-                  style={{ width: 50, height: 50 }}
-                />
-                <td></td>
+                <td>
+                  <img
+                    src={team.team.crestUrl}
+                    style={{ width: 50, height: 50 }}
+                  />
+                </td>
                 <td>{team.position}</td>
                 <td>{team.team.name}</td>
                 <td>{team.playedGames}</td>

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald|Rubik&display=swap");
+thead {
+  background-color: #38003c;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+}
+tr {
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:hover {
+  background-color: darkgray;
+  color: white;
+}
+td {
+  padding: 20px;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+table {
+  display: inline-block;
+  height: 90vh;
+  overflow-y: scroll;
+}
