@@ -4,7 +4,11 @@ import Header from "./header";
 const Layout = props => {
   return (
     <div>
-      <Header />
+      <Header
+        goBack={
+          props.children.props.className === "details-container" ? true : false
+        }
+      />
       {props.children}
     </div>
   );
