@@ -1,8 +1,19 @@
 import React from "react";
 import App, { Container } from "next/app";
 import Head from "next/head";
+import Router from "next/router";
+import NProgress from "nprogress";
+
 import axios from "axios";
 import AppContext from "../components/appContext";
+
+Router.events.on("routeChangeStart", url => {
+  NProgress.start();
+});
+Router.events.on("routeChangeComplete", () => {
+  NProgress.done();
+});
+Router.events.on("routeChangeError", () => NProgress.done());
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -42,7 +53,7 @@ class MyApp extends App {
           />
           <link href="../static/table.css" rel="stylesheet" />
           <link href="../static/style.css" rel="stylesheet" />
-          <link href="../static/nprogressim.css" rel="stylesheet" />
+          <link href="../static/nprogress.css" rel="stylesheet" />
         </Head>
 
         <AppContext.Provider
