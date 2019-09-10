@@ -8,13 +8,13 @@ const Header = props => {
     <header>
       {props.goBack && (
         <div style={{ display: "flex", flex: 1, justifyContent: "center" }}>
-          <button onClick={() => Router.back()}>
+          <a onClick={() => Router.back()}>
             <img
               src="../static/left-arrow.svg"
               alt="go back"
               style={{ width: 25, height: 25, cursor: "pointer" }}
             />
-          </button>
+          </a>
         </div>
       )}
       <Link href="/">
