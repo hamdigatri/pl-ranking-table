@@ -42,6 +42,7 @@ class MyApp extends App {
           />
           <link href="../static/table.css" rel="stylesheet" />
           <link href="../static/style.css" rel="stylesheet" />
+          <link href="../static/nprogressim.css" rel="stylesheet" />
         </Head>
 
         <AppContext.Provider
